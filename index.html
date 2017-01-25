@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitHub Dungeon Crawl Classics Zero Level Non-Player Character Generator</title>
+    
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mark Tasaka 2017">
+
+
+	<link rel="stylesheet" href="css/dcc_github.css"  />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+
+
+	</head>
+	
+	
+<body>
+
+
+	<section>
+		
+		<h1>Dungeon Crawl Classics Level Zero Non-Player Character Generator</h1>
+		
+		<p>Welcome to the Launch Page of the Dungeon Crawl Classics  Level Zero Non-Player Character Generator.  Please make a selection below to generate a range of zero-level non-player characters.  The Level Zero Non-Player Character Generators are designed using JavaScript and produce playable zero level characters consistent with Goodman Games’ Dungeon Crawl Classics Pen and Paper Roleplaying System.</p>
+		
+		<p>For more information on the Dungeon Crawl Classics Game System, please visit:</p>
+		
+		<p><a href="http://goodman-games.com/" target="_blank" class="links">http://goodman-games.com/</a></p>
+		
+		<p>To see the generator used in the contents of the web, please visit:</p>
+		
+		<p><a href="http://www.oldschooladventures.org/dcc/npc_level_zero/" target="_blank" class="links">http://www.oldschooladventures.org/dcc/npc_level_zero/</a></p>
+		
+		
+		<h2>Level Zero Non Player Character Generator</h2>
+			
+			<form action="" id ="myForm"  target="_blank">
+			
+			
+		<div class="content">
+		
+			  <select id="zero_level_npc" class="dropdownmenu_npc">
+				<option value="1" selected >Acolytes</option>
+				<option value="2" >Brigands&#92;Thugs</option>
+				<option value="3" >Rangers</option>
+				<option value="4" >Soldiers</option>
+			  </select>
+			
+			
+		<div class="generatorb">
+			<span class="generatorbuttons">
+
+				<input type="submit" value="Generate NPC" id="generate_level0_characters"/>
+			</span>
+				
+			<span id="generatorbuttons">
+				<input type="reset"  value="Reset" id="reset__level0_characters"/>
+			</span>
+				
+				</div>
+				</div>
+				</form>
+
+
+    </section>
+
+
+	<script>
+		document.getElementById("generate_level0_characters").onclick = function() {
+			
+			var title = "acolyte";
+			
+			if(document.getElementById("zero_level_npc").value == 2) {
+				title = "brigand";
+			}
+			else if(document.getElementById("zero_level_npc").value == 3) {
+				title = "ranger";
+			}
+			else if(document.getElementById("zero_level_npc").value == 4) {
+				title = "soldier";
+			}
+			
+						
+			document.getElementById("myForm").action = "npc/dcc_" + title + ".html";
+			
+
+		}
+	
+	
+	</script>
+        
+
+
+</body>
+    
+</html>
